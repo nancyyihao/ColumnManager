@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.netease.animationtest.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.netease.animationtest.MainActivity"
+        tools:showIn="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+            <TextView
+                android:id="@+id/my_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="我的栏目"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@id/my_columns"
+                android:id="@+id/recycler_view_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+            <TextView
+                android:id="@+id/recent_deleted_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:text="最近删除"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_deleted"
+                android:layout_below="@id/recent_deleted_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+            <TextView
+                android:id="@+id/more_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="更多栏目"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_more"
+                android:layout_below="@id/more_columns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+
